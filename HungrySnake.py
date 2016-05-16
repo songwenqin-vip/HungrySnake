@@ -254,7 +254,7 @@ class Game:
     def initBricks(self):
         for x in range(0, maxX):
             for y in range(0, maxY):
-                if logicMap[x][y] == 1:
+                if logicMap[y][x] == 1:
                     newPoint = (x, y)
                     bricks.append(newPoint)
                     newBrick = Brick(newPoint)
