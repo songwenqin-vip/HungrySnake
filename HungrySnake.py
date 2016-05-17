@@ -96,11 +96,6 @@ class Snake:
             if directions[changeDirection] + directions[self.moveDirection] != 0:
                 # 调整方向
                 self.moveDirection = changeDirection
-            else:
-                # 反向运动
-                self.headPoint = self.body[0].getPoint()
-                self.body.reverse()
-                self.moveDirection = changeDirection
         
         newPoint = (self.headPoint[0] + moveX[self.moveDirection], self.headPoint[1] + moveY[self.moveDirection])
         if newPoint[0] >= maxX:
